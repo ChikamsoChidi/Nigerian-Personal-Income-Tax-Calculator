@@ -45,4 +45,4 @@ Read more about the project and how it works here:
 If you want to run from source instead of the `.exe`:
 ```sh
 pip install customtkinter pillow
-python main.py
+python "Desktop Application.py"
