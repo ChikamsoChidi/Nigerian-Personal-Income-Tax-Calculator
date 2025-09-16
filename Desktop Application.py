@@ -1,5 +1,6 @@
 import customtkinter as ctk
 import PIT_calculator as PIT
+import os, sys
 
 
 ctk.set_appearance_mode("System")
@@ -10,9 +11,18 @@ app.title("Personal Income Tax Calculator")
 app.geometry("400x300")
 app.configure(fg_color="#b7cce0")  # very pale blue background
 
+def resource_path(relative_path):
+    """ Get absolute path to resource (works for dev and for PyInstaller) """
+    try:
+        # PyInstaller puts files in a temp folder
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
 
-# Load PNG image
-app.iconbitmap("img.ico")
+    return os.path.join(base_path, relative_path)
+
+# Usage
+app.iconbitmap(resource_path("img.ico"))
 
 # Label
 label = ctk.CTkLabel(app, text="Enter Income",  font=("Arial", 14, "bold")  )
