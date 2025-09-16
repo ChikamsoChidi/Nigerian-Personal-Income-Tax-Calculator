@@ -8,13 +8,13 @@ The calculator applies the **current tax brackets, relief allowances, and deduct
 
 ## 📥 Download
 
-👉 [Download the Windows Executable](assets/app.exe)
+👉 [Download the Windows Executable](https://drive.google.com/drive/folders/1H7yrOHxqo8hYDJM1M_UScJ5E_k-KMBKe?usp=drive_link)
 
 ---
 
 ## 🖼 Preview
 
-![App Screenshot](https://raw.githubusercontent.com/ChikamsoChidi/Nigerian-Personal-Income-Tax-Calculator/refs/heads/main/assets/Personal%20Income%20Tax%20Calculator.png)
+![App Screenshot](assets/Personal%20Income%20Tax%20Calculator.png)
 
 ---
 
