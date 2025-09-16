@@ -5,11 +5,10 @@ import PIT_calculator as PIT
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
 
-
 app = ctk.CTk()
 app.title("Personal Income Tax Calculator")
 app.geometry("400x300")
-app.configure(fg_color="#d6e3f2")  # very pale blue background
+app.configure(fg_color="#b7cce0")  # very pale blue background
 
 
 # Load PNG image
@@ -79,14 +78,14 @@ def calculate_result():
             value = parse_input(textbox.get())
             value = PIT.PIT(value)  # convert input to number
             value = display_num(value)
-            result_label.configure(text=f"Result: {value}")
+            result_label.configure(text=f"Personal Income Tax: ₦ {value}")
             
         elif checkbox.get() == 1:
             value = parse_input(textbox.get()) # convert input to number
             value = value * 12
             value = PIT.PIT(value)  # convert input to number
             value = display_num(value)
-            result_label.configure(text=f"Result: ₦ {value}")
+            result_label.configure(text=f"Personal Income Tax: ₦ {value}")
 
     except ValueError:
         result_label.configure(text="Please enter a valid number!")
