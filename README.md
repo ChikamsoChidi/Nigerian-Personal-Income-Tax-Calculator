@@ -21,7 +21,7 @@ The calculator applies the **current tax brackets, relief allowances, and deduct
 ## 📖 Blog
 
 Read more about the project and how it works here:  
-👉 [Project Blog](<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7373334891205320704?collapsed=1" height="560" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>)
+👉 [Project Blog](https://www.linkedin.com/embed/feed/update/urn:li:share:7373334891205320704?collapsed=1)
 
 ---
 
