@@ -14,14 +14,14 @@ The calculator applies the **current tax brackets, relief allowances, and deduct
 
 ## 🖼 Preview
 
-![App Screenshot](assets/Personal Income Tax Calculator.png)
+![App Screenshot](assets/"Personal Income Tax Calculator.png")
 
 ---
 
 ## 📖 Blog
 
 Read more about the project and how it works here:  
-👉 [Project Blog](https://www.linkedin.com/posts/chikamso-chidi-akoma-98b81a233_breakingnews-hottopic-viralpost-activity-7373334892409069568-xMoY?utm_source=share&utm_medium=member_desktop&rcm=ACoAADpR6fsBLexEJKrTQgE6dqXEx_2Ppb1Ksm8)
+👉 [Project Blog](<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7373334891205320704?collapsed=1" height="560" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>)
 
 ---
 
