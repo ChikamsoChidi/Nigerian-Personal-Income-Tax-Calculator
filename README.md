@@ -27,7 +27,6 @@ Read more about the project and how it works here:
 
 ## ⚡ Features
 - Calculate **monthly** or **annual** tax.
-- Applies **relief allowances & deductions** automatically.
 - User-friendly interface built with **CustomTkinter**.
 - Works offline — no internet required.
 
