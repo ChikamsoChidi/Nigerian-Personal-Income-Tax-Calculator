@@ -1,28 +1,58 @@
 import customtkinter as ctk
 import PIT_calculator as PIT
 
+
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("blue")
+
 
 app = ctk.CTk()
 app.title("Personal Income Tax Calculator")
 app.geometry("400x300")
+app.configure(fg_color="#d6e3f2")  # very pale blue background
+
+
+# Load PNG image
+app.iconbitmap("img.ico")
 
 # Label
-label = ctk.CTkLabel(app, text="Enter Annual Income")
-label.pack(pady=(20, 5))
+label = ctk.CTkLabel(app, text="Enter Income",  font=("Arial", 14, "bold")  )
+label.pack(pady=(10, 5))
 
 # Small Textbox (Entry)
 textbox = ctk.CTkEntry(app, placeholder_text="Type a number...")
 textbox.pack(pady=10)
 
-# Label
-label2 = ctk.CTkLabel(app, text="Enter Monthly Income")
-label2.pack(pady=(20, 5))
+def checkbox1_action():
+    if checkbox.get() == 1:   # If box 1 is checked
+        checkbox2.deselect()   # Deselect box 2
 
-# Small Textbox (Entry)
-textbox2 = ctk.CTkEntry(app, placeholder_text="Type a number...")
-textbox2.pack(pady=10)
+def checkbox2_action():
+    if checkbox2.get() == 1:   # If box 2 is checked
+        checkbox.deselect()   # Deselect box 1
+
+
+# Checkbox (for monthly salary)
+checkbox = ctk.CTkCheckBox(
+    app,
+    text="Monthly Income",
+    command=checkbox1_action,
+    fg_color="#e67e22",      # muted orange
+    hover_color="#f5b041",   # paler orange on hover
+    text_color="black"       # clear text color
+)
+checkbox.pack(pady=10)
+
+# Checkbox (for annual salary)
+checkbox2 = ctk.CTkCheckBox(
+    app,
+    text="Annual Income",
+    command=checkbox2_action,
+    fg_color="#e67e22",      # muted orange
+    hover_color="#f5b041",   # paler orange on hover
+    text_color="black"       # clear text color
+)
+checkbox2.pack(pady=10)
 
 # Result label (initially empty)
 result_label = ctk.CTkLabel(app, text="")
@@ -41,26 +71,34 @@ def display_num(num):
 
 
 # Button action
-def multiply_input():
+def calculate_result():
     try:
-        if textbox.get() and textbox.get():
-            result_label.configure(text="Please enter a number into only one field!")
-        elif textbox.get():
+        if checkbox.get() == 0 and checkbox2.get() == 0:
+            result_label.configure(text="Select a duration")
+        elif checkbox2.get() == 1:
             value = parse_input(textbox.get())
             value = PIT.PIT(value)  # convert input to number
             value = display_num(value)
             result_label.configure(text=f"Result: {value}")
-        elif textbox2.get():
-            value = parse_input(textbox2.get()) # convert input to number
+            
+        elif checkbox.get() == 1:
+            value = parse_input(textbox.get()) # convert input to number
             value = value * 12
             value = PIT.PIT(value)  # convert input to number
             value = display_num(value)
-            result_label.configure(text=f"Result: {value}")
+            result_label.configure(text=f"Result: ₦ {value}")
 
     except ValueError:
         result_label.configure(text="Please enter a valid number!")
 
-button = ctk.CTkButton(app, text="Calculate Personal Income Tax", command=multiply_input)
+button = ctk.CTkButton(
+    app, 
+    text="Calculate Personal Income Tax",
+    fg_color="#e67e22",      # muted orange (not too bright)
+    hover_color="#f5b041",   # paler orange for hover
+    text_color="white",      # good contrast
+    command=calculate_result
+)
 button.pack(pady=10)
 
 app.mainloop()
