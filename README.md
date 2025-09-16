@@ -14,7 +14,7 @@ The calculator applies the **current tax brackets, relief allowances, and deduct
 
 ## 🖼 Preview
 
-![App Screenshot](assets/"Personal Income Tax Calculator.png")
+![App Screenshot](https://raw.githubusercontent.com/ChikamsoChidi/Nigerian-Personal-Income-Tax-Calculator/refs/heads/main/assets/Personal%20Income%20Tax%20Calculator.png)
 
 ---
 
